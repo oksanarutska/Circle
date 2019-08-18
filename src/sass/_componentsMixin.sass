@@ -1,0 +1,67 @@
+@import "variable"
+
+%circle_section_black
+  background: $color_black
+  border: 5px solid $color_brown
+
+%circle_section_red
+  background: $color_red
+  border: 5px solid $color_brown
+
+@mixin circle_text($left, $top, $angle)
+  z-index: 10
+  position: absolute
+  color: $color_white
+  font-size: 28px
+  left: $left
+  top: $top
+  transform: rotate($angle)
+
+@mixin popup_button($color)
+  text-decoration: none
+  text-align: center
+  outline: none
+  display: inline-block
+  padding: 10px 30px
+  margin: 10px 20px
+  position: relative
+  overflow: hidden
+  border: 2px solid $color
+  border-radius: 8px
+  font-family: $font-family
+  color: $color
+  transition: .2s ease-in-out
+  &:hover
+    background-color: $color
+    cursor: pointer
+    color: $color_white
+    &:before
+      left: 150px
+      transition: .5s ease-in-out
+  &:before
+    content: ""
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5))
+    height: 50px
+    width: 50px
+    position: absolute
+    top: -8px
+    left: -75px
+    transform: skewX(-45deg)
+
+@mixin circle_button($color)
+  text-decoration: none
+  outline: none
+  display: inline-block
+  color: $color_white
+  font-weight: bold
+  letter-spacing: 2px
+  font-family: $font-family
+  padding: 15px 30px
+  border-radius: 10px
+  box-shadow: 0 0 40px 40px $color inset, 0 0 0 0 $color
+  transition: 150ms ease-in-out
+  &:hover
+    box-shadow: 0 0 10px 0 $color inset, 0 0 10px 4px $color
+    color: $color
+    cursor: pointer
+
