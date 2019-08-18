@@ -66,4 +66,4 @@ gulp.task('browser-sync', ['html', 'sass', 'assets', 'js'], function () {
 
 gulp.task('build', ['sass', 'html', 'assets', 'js']);
 
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('start', ['browser-sync', 'watch']);

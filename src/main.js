@@ -1,9 +1,11 @@
 document.querySelector('.popup_button').addEventListener('click', function (e) {
    document.querySelector('.popup').classList.remove('show');
+   document.querySelector('.wrapper_circle_button').classList.add('disabled');
     turnCircle()
 });
 document.querySelector('.popup_button_stop').addEventListener('click', function (e) {
     document.querySelector('.popup').classList.remove('show');
+    document.querySelector('.wrapper_circle_button').classList.remove('disabled');
     document.querySelector('.wrapper_circle').style.transform = 'rotate(0deg)'
 });
 document.querySelector('#circle_button').addEventListener('click', function (e) {
