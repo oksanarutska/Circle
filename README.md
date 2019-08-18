@@ -1,6 +1,6 @@
 # Circle
 
-[Circle](https://oksanarutska.github.io/Circle/public/)
+[Demo](https://oksanarutska.github.io/Circle/public/)
 ## Technology
 - sass
 - js
